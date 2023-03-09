@@ -58,7 +58,7 @@ public class RhymingDict {
         }
     }
 
-    // TO DO 2: Store a rhymeGroup (key) and word (value) in the Dictionary (hashtable)
+    // ********** TO DO 2: Store a rhymeGroup (key) and word (value) in the Dictionary (hashtable) **********
     public static void storeRhyme(DictionaryInterface rhymingDict, String line) {
 
 
@@ -121,7 +121,7 @@ public class RhymingDict {
 
     }
 
-    // TO DO #3: Remove any of the unrhymables
+    // ********** TO DO #3: Remove any of the unrhymables **********
     public static void removeUnrhymables(DictionaryInterface rhymingDict) {
 
     }
@@ -176,6 +176,12 @@ public class RhymingDict {
 		*/
 
         removeUnrhymables(rhymingDict);
+        /*
+        // the dictionary after removing unrhymables
+        String[] newKeys = rhymingDict.getKeys();
+        System.out.println(newKeys.length);
+        System.out.println("Biggest bucket = " + rhymingDict.biggestBucket() + " average bucket = " + rhymingDict.averageBucket());
+        */
         for (int i = 0; i < poemCount; i++) {
             createRhyme(rhymingDict);
         }

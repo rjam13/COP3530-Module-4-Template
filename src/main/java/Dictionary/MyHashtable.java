@@ -5,7 +5,7 @@ import java.util.Hashtable;
 import List.ListInterface;
 import List.MyLinkedList;
 
-class MyHashtable implements DictionaryInterface {
+public class MyHashtable implements DictionaryInterface {
 
     protected int tableSize;
     protected int size;
@@ -86,14 +86,101 @@ class MyHashtable implements DictionaryInterface {
     // Adds a value stored under the given key. If the key has already been stored in the Dictionary,
     // replaces the value associated with the key and returns the old value. If the key isn't in the dictionary
     // returns null.
-    public Object put(String key, Object value){ return null;}
+    public Object put(String key, Object value){
+        // 1. Compute an array index given the key
 
-    public Object get(String key){ return null;} // Retrieves the value stored with the key.
+        // 2. If that location in the table is null,
+        // that means nothing has been previously stored using a key with this hash code.
 
-    public void remove(String key){} // Deletes the key/value pair stored with the given key.
+            // a. Create a new MyLinkedList to be the bucket.
+
+            // b. Add the new Entry for the key/value pair to the list.
+
+            // c. Set this location in the array equal to the new bucket (list).
+
+            // d. Increment the size (the number of unique keys you have stored).
+
+        // 3. If the location in the table isn't null,
+        // that means keys with this colliding hash code have been previously stored.
+
+        // 3a, a value exists for the key
+
+            // a. Linearly search through the bucket (the list) stored at this array
+            // location comparing the key for each entry with the key passed into put().
+
+                // If you get a match, this means this key as been previously stored.
+
+                    // Save the old value in the Entry (so you can return it) and replace it with the new value.
+                    // (use the code below)
+                    //  Entry oldValue = new Entry(key, e.value);
+                    //  e.value = value;
+                    // NOTE: this is technically not correct as you would need to create a deep copy of the entry,
+                    // however, that is outside the realm of this assignment. The code above will be
+                    // enough to complete the assignment
+
+                    // return old value here
+                    // return oldValue.value;
+
+        // 3b, a value does not exist for the key
+
+            // b. If you don't find the key in the bucket,
+            // then just add a new Entry (with the key and value) to the beginning of the list.
+
+            // Increment the size.
+
+        return null;
+    }
+
+    public Object get(String key){
+        // 1. Compute an array index given the key
+
+        // 2. If that location in the table is null,
+        // that means nothing has been stored using a key with this hash code.
+        // So we can return null.
+
+        // 4. Linearly search through the bucket (the list),
+        // comparing the key for each entry with the key passed into get().
+
+            // Extracting each element in
+            // the Linked List
+
+            // If you find a match, return the value.
+
+        return null;
+    } // Retrieves the value stored with the key.
+
+    public void remove(String key){
+        // 1. Compute an array index given the key
+
+        // 2. If that location in the table is null, then this key has definitely not been used to store a value.
+
+        // 3. If the location in the table has a bucket,
+        // we need to linearly search it to see if it contains an Entry with the key.
+
+            // If you find an Entry in the bucket (linked list) with the key:
+
+                // a. Remove this Entry from the bucket.
+
+                // b. Decrement size (the number of unique keys stored in the hashtable).
+
+    } // Deletes the key/value pair stored with the given key.
 
     public void clear(){} // Empties the dictionary.
 
-    public String[] getKeys(){return null;}
+    public String[] getKeys(){
+        // 1. Create a String[] with a size equal to the number of unique keys in the hashtable
+
+        // 2. Iterate through the hashtable array.
+
+            // For each table location that isn't null
+
+                // a. Iterate though the bucket (linked list)
+
+                    // getting the key out of each Entry and storing it in
+                    // the array of strings you created in step 1.
+
+        // 3. Return the String[]
+        return null;
+    }
 
 }
