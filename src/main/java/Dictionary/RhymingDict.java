@@ -3,6 +3,7 @@ import java.io.*;
 import java.util.*;
 import java.util.Arrays;
 import List.MyLinkedList;
+import List.MySortedLinkedList;
 
 public class RhymingDict {
     private static Random random;
@@ -45,8 +46,7 @@ public class RhymingDict {
 
         // Load the file and read it
         try {
-            String path = "cmudict/cmudict-abridged.dict";
-            FileInputStream stream = new FileInputStream(new File(path));
+            InputStream stream = Thread.currentThread().getContextClassLoader().getResourceAsStream("cmudict-abridged.dict");
             BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
 
             for(String line = reader.readLine(); line != null; line = reader.readLine()) {
@@ -98,7 +98,7 @@ public class RhymingDict {
         MyLinkedList group1 = (MyLinkedList)rhymingDict.get(group1Key);
 
         // Uncomment to check the length of the word sets we selected
-        //System.out.printf("\t%d words, %d words \n", group0.getLength(), group1.getLength());
+        //System.out.printf("\t%d words, %d words \n", group0.size(), group1.size());
 
         // Pick out word indexes from the two rhyme groups
         // We need four words, so two words from each group

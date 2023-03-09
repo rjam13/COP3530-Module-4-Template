@@ -1,12 +1,22 @@
 package Dictionary;
 import java.util.ArrayList;
 import java.util.Hashtable;
+
+import List.ListInterface;
 import List.MyLinkedList;
 
 class MyHashtable implements DictionaryInterface {
 
+    protected int tableSize;
+    protected int size;
+    // The LinkedList is of type Entry
     protected MyLinkedList[] table;
-    // Returns the size of the biggest bucket (most collisions) in the hashtable.
+
+    public MyHashtable(int tableSize) {
+        table = new MyLinkedList[tableSize];
+        this.tableSize = tableSize;
+    }
+
     public int biggestBucket()
     {
         int biggestBucket = 0;
@@ -45,7 +55,7 @@ class MyHashtable implements DictionaryInterface {
     public String toString()
     {
         String s = "";
-        for(int tableIndex = 0; tableIndex < size(); tableIndex++) {
+        for(int tableIndex = 0; tableIndex < tableSize; tableIndex++) {
             if (table[tableIndex] != null) {
                 MyLinkedList bucket = table[tableIndex];
                 for(int listIndex = 0; listIndex < bucket.size(); listIndex++) {
@@ -61,6 +71,11 @@ class MyHashtable implements DictionaryInterface {
     {
         String key;
         Object value;
+
+        Entry(String key, Object value) {
+            this.key = key;
+            this.value = value;
+        }
     }
 
     // Implement these methods
