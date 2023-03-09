@@ -1,5 +1,4 @@
-# Assignment 4
-> # Hashtables
+# Assignment 4: Hashtables
 
 In this assignment we will use a rhyming dictionary and loading it into a hashtable and using the hashtable ADT(abstract data type) to implement a bad poetry generator.
 
@@ -13,6 +12,22 @@ Optional:
 
 TODO #3: Removing unrhymable words​
 
+## Testing
+
+* Testing can be done through Maven with the command, <br>
+  `mvn test` <br>
+* To run more specific tests, run the command <br>
+  `mvn -Dtest=AssignmentTest#TESTCASEHERE test` <br>
+  where `TESTCASEHERE` is the test case you want to run. These test cases can be found in **src/test/java/AssignmentTest** <br>
+    * Ex:  `mvn -Dtest=AssignmentTest#test_2_puts test`
+
+The results can be found in the command line or in **target/surefire-reports/AssignmentTest.txt** after execution.
+
+**Part of grading will be these test cases.**
+
+Alternatively,
+
+You can use the main method found in RhymingDict.java. In fact, the test cases are dervied from that main method.
 
 ## To Do 1: Implementing a Hashtable
 

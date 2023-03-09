@@ -69,7 +69,7 @@ public class AssignmentTest {
     }
 
     @Test
-    public void test_removeUnrhymables() {
+    public void test_removeUnrhymables_OPTIONAL() {
         MyHashtable rhymingDict = new MyHashtable(20000);
         RhymingDict.loadDictionary(rhymingDict);
         RhymingDict.removeUnrhymables(rhymingDict);
