@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8879ae2d-cc00-4746-a0ea-5e0b90b75534" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.github/classroom/autograding.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/classroom.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/.cmudict-abridged 2.dict.icloud" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/LICENSE 2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/AssignmentTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
